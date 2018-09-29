@@ -6,7 +6,7 @@ public class Persian extends Cat{
         this.setType(CatType.Persian);
     }
 
-    public Persian(Integer id, Integer age, String name, String type) {
+    public Persian(String id, Integer age, String name, String type) {
         super(id, age, name, type);
     }
 }

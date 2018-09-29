@@ -7,11 +7,10 @@
 
         <property name="show_sql">true</property><!--为true时会在控制台输出sql语句，有利于跟踪hibernate的状态-->
         <property name="format_sql">true</property><!--会格式化输出sql语句-->
-        <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.connection.autocommit">true</property><!--自动提交事务-->
 
         <!--注册映射文件写在cfg.xml-->
-        <mapping resource="dao/entity.hbm.xml"></mapping>
+        <mapping resource="Dao/entity.hbm.xml"/>
 
 
     </session-factory>

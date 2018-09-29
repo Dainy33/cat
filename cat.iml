@@ -12,6 +12,7 @@
       <configuration>
         <datasource-map>
           <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="sessionFactory" />
           <unit-entry name="src:main:resources:hibernate.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
@@ -33,7 +34,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17-atlassian-2-19d553e" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-nop:1.6.4" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.4" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
@@ -62,7 +63,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.12" level="project" />
-    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.6.0" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />
   </component>
 </module>

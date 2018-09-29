@@ -1,11 +1,12 @@
 package Model;
 
+
 public class Birman extends Cat {
     public Birman() {
         this.setType(CatType.Birman);
     }
 
-    public Birman(Integer id, Integer age, String name, String type) {
+    public Birman(String id, Integer age, String name, String type) {
         super(id, age, name, type);
     }
 }

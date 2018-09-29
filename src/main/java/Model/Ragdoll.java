@@ -5,7 +5,7 @@ public class Ragdoll extends Cat{
         this.setType(CatType.Ragdoll);
     }
 
-    public Ragdoll(Integer id, Integer age, String name, String type) {
+    public Ragdoll(String id, Integer age, String name, String type) {
         super(id, age, name, type);
     }
 }
