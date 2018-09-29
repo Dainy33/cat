@@ -1,0 +1,50 @@
+import Model.Cat;
+import Model.Persian;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.junit.*;
+import service.Meow;
+import service.implement.MeowImpl;
+
+public class JUnitTest {
+    private static final SessionFactory ourSessionFactory;
+
+    static {
+            Configuration configuration = new Configuration();
+            configuration.configure();
+            ourSessionFactory = configuration.buildSessionFactory();
+
+    }
+
+    public static Session getSession() throws HibernateException {
+        return ourSessionFactory.openSession();
+    }
+
+    @Test
+    public void connectionTest(){
+        Session session = getSession();
+
+        Persian persian = new Persian();
+        persian.setAge(3);
+        persian.setName("Lucy");
+
+/*
+        Meow catmeow = new MeowImpl();
+        catmeow.meow(persian);
+*/
+
+        session.save(persian);
+
+        session.close();
+    }
+
+
+}
+/**
+ * @program: cat
+ * @description:
+ * @author: Dainy33
+ * @create: 2018-09-28 18:06
+ **/
