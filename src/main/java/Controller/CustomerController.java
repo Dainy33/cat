@@ -1,11 +1,10 @@
 package Controller;
 
-public class BuyNewCat {
-
+public class CustomerController {
 }
 /**
  * @program: cat
  * @description:
  * @author: Dainy33
- * @create: 2018-09-29 09:51
+ * @create: 2018-09-29 17:48
  **/

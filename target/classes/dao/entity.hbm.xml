@@ -24,15 +24,17 @@
         <property name="age" column="age"/>
         <property name="type" column="type"/>
     </class>
+<!--
 
-    <class name="Model.Ragdoll" table="ragdoll">                  <!--指定实体类和对应的数据表-->
-        <id name="id" column="id">                          <!--<id>元素设定类中的id和表的主键id的映射-->
-            <generator class="native"/>          <!--<gender>元素指定对象标识符生成器，负责生成唯一id。以后会详细讲-->
+    <class name="Model.Ragdoll" table="ragdoll">                  &lt;!&ndash;指定实体类和对应的数据表&ndash;&gt;
+        <id name="id" column="id">                          &lt;!&ndash;<id>元素设定类中的id和表的主键id的映射&ndash;&gt;
+            <generator class="native"/>          &lt;!&ndash;<gender>元素指定对象标识符生成器，负责生成唯一id。以后会详细讲&ndash;&gt;
         </id>
-        <property name="name" column="name"/>     <!--name是实体类属性的名字，column是数据表中列的名字-->
+        <property name="name" column="name"/>     &lt;!&ndash;name是实体类属性的名字，column是数据表中列的名字&ndash;&gt;
         <property name="age" column="age"/>
         <property name="type" column="type"/>
     </class>
+-->
 
 
     <!--

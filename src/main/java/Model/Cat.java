@@ -1,6 +1,8 @@
 package Model;
 
-public class Cat {
+import java.io.Serializable;
+
+public class Cat implements Serializable {
     private Integer id;
     private Integer age;
     private String name;
