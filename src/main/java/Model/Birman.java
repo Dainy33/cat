@@ -2,6 +2,7 @@ package Model;
 
 public class Birman extends Cat {
     public Birman() {
+        this.setType(CatType.Birman);
     }
 
     public Birman(Integer id, Integer age, String name, CatType type) {

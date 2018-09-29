@@ -2,6 +2,7 @@ package Model;
 
 public class Ragdoll extends Cat{
     public Ragdoll() {
+        this.setType(CatType.Ragdoll);
     }
 
     public Ragdoll(Integer id, Integer age, String name, CatType type) {

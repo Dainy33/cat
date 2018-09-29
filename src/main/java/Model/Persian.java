@@ -1,7 +1,9 @@
 package Model;
 
 public class Persian extends Cat{
+
     public Persian() {
+        this.setType(CatType.Persian);
     }
 
     public Persian(Integer id, Integer age, String name, CatType type) {

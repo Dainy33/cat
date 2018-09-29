@@ -9,9 +9,6 @@ import static Model.CatType.*;
 
 public class MeowImpl implements Meow {
 
-    private Cat cat = new Cat();
-
-    @Override
     public String meow(Cat cat) {
         String meowByType = null;
         switch (cat.getType()) {
@@ -24,6 +21,8 @@ public class MeowImpl implements Meow {
             case Ragdoll:
                 meowByType = "喵喵喵 喵喵喵 喵喵喵";
                 break;
+            default:
+                meowByType = "遇到你真是太幸运了";
         }
         return meowByType;
     }

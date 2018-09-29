@@ -1,4 +1,5 @@
 import Model.Cat;
+import Model.CatType;
 import Model.Persian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -29,12 +30,11 @@ public class JUnitTest {
         Persian persian = new Persian();
         persian.setAge(3);
         persian.setName("Lucy");
+        persian.setType(CatType.Persian);
 
-/*
         Meow catmeow = new MeowImpl();
-        catmeow.meow(persian);
-*/
-
+        String s = catmeow.meow(persian);
+        System.out.println(s);
         session.save(persian);
 
         session.close();

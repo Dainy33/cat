@@ -9,11 +9,11 @@
     <version>1.0-SNAPSHOT</version>
 
 
-    <!--
-    maven项目默认不加载main目录下的.xml文件
-    在maven项目的根目录的pom.xml文件中添加指定生成xml资源文件的目录
-    -->
     <build>
+        <!--
+            maven项目默认不加载main目录下的.xml文件
+            在maven项目的根目录的pom.xml文件中添加指定生成xml资源文件的目录
+        -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -23,6 +23,16 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+
+        <!--使test的resources能直接用main的resources-->
+        <testResources>
+            <testResource>
+                <directory>${project.basedir}/src/test/resources</directory>
+            </testResource>
+            <testResource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </testResource>
+        </testResources>
     </build>
 
 
