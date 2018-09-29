@@ -13,9 +13,9 @@ public class JUnitTest {
     private static final SessionFactory ourSessionFactory;
 
     static {
-            Configuration configuration = new Configuration();
-            configuration.configure();
-            ourSessionFactory = configuration.buildSessionFactory();
+        Configuration configuration = new Configuration();
+        configuration.configure();
+        ourSessionFactory = configuration.buildSessionFactory();
 
     }
 
@@ -24,7 +24,7 @@ public class JUnitTest {
     }
 
     @Test
-    public void connectionTest(){
+    public void connectionTest() {
         Session session = getSession();
 
         Persian persian = new Persian();

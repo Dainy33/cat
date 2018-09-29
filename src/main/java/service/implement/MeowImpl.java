@@ -11,18 +11,17 @@ public class MeowImpl implements Meow {
 
     public String meow(Cat cat) {
         String meowByType = null;
-        switch (cat.getType()) {
-            case Birman:
-                meowByType = "喵 喵 喵！";
-                break;
-            case Persian:
-                meowByType = "喵喵 喵喵 喵喵！";
-                break;
-            case Ragdoll:
-                meowByType = "喵喵喵 喵喵喵 喵喵喵";
-                break;
-            default:
-                meowByType = "遇到你真是太幸运了";
+        if (Birman.equals(cat.getType())) {
+            meowByType = "Birman喵 喵 喵！";
+
+        } else if (Persian.equals(cat.getType())) {
+            meowByType = "Persian喵 喵 喵！";
+
+        } else if (Ragdoll.equals(cat.getType())) {
+            meowByType = "Ragdoll喵 喵 喵！";
+
+        } else {
+            meowByType = "遇到你真是太幸运了";
         }
         return meowByType;
     }

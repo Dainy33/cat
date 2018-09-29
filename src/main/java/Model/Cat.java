@@ -1,15 +1,15 @@
 package Model;
 
-public class Cat  {
+public class Cat {
     private Integer id;
     private Integer age;
     private String name;
-    private CatType type;
+    private String type;
 
     public Cat() {
     }
 
-    public Cat(Integer id, Integer age, String name, CatType type) {
+    public Cat(Integer id, Integer age, String name, String type) {
         this.id = id;
         this.age = age;
         this.name = name;
@@ -40,11 +40,11 @@ public class Cat  {
         this.name = name;
     }
 
-    public CatType getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(CatType type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

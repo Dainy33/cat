@@ -5,11 +5,11 @@ import service.Feed;
 
 public class FeedImpl implements Feed {
     public String eating(Cat cat) {
-        return "Eating!";
+        return cat.getType() + "Eating!";
     }
 
     public String drinking(Cat cat) {
-        return "Drinking!";
+        return cat.getType() + "Drinking!";
     }
 }
 /**

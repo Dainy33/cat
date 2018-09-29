@@ -5,8 +5,8 @@ public class Birman extends Cat {
         this.setType(CatType.Birman);
     }
 
-    public Birman(Integer id, Integer age, String name, CatType type) {
-        super(id, age, name, CatType.Birman);
+    public Birman(Integer id, Integer age, String name, String type) {
+        super(id, age, name, type);
     }
 }
 /**
