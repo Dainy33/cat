@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-profile</artifactId>
 
-  <name>Maven Profile Model</name>
+  <name>Maven Profile model</name>
 
   <dependencies>
     <dependency>

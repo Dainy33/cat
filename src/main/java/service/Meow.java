@@ -1,6 +1,6 @@
 package service;
 
-import Model.Cat;
+import model.Cat;
 
 public interface Meow {
     public String meow(Cat cat);

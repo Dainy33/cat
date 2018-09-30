@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-plugin-registry</artifactId>
 
-  <name>Maven Plugin Registry Model</name>
+  <name>Maven Plugin Registry model</name>
 
   <dependencies>
     <dependency>

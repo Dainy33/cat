@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-plugin-descriptor</artifactId>
 
-  <name>Maven Plugin Descriptor Model</name>
+  <name>Maven Plugin Descriptor model</name>
 
   <dependencies>
     <dependency>

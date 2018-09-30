@@ -1,8 +1,7 @@
 package service.implement;
 
-import Dao.CatDao;
-import Model.Cat;
-import org.springframework.beans.factory.annotation.Autowired;
+import dao.CatDao;
+import model.Cat;
 import org.springframework.stereotype.Service;
 import service.Buy;
 

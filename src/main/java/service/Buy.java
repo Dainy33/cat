@@ -1,6 +1,6 @@
 package service;
 
-import Model.Cat;
+import model.Cat;
 
 public interface Buy {
     public void buy(Cat cat);

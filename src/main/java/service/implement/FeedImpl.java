@@ -1,6 +1,6 @@
 package service.implement;
 
-import Model.Cat;
+import model.Cat;
 import service.Feed;
 
 public class FeedImpl implements Feed {

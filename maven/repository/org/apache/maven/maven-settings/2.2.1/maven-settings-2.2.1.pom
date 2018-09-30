@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-settings</artifactId>
 
-  <name>Maven Local Settings Model</name>
+  <name>Maven Local Settings model</name>
 
   <dependencies>
     <dependency>

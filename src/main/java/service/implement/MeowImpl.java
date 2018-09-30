@@ -1,11 +1,9 @@
 package service.implement;
 
-import Model.Cat;
-import Model.CatType;
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
+import model.Cat;
 import service.Meow;
 
-import static Model.CatType.*;
+import static model.CatType.*;
 
 public class MeowImpl implements Meow {
 

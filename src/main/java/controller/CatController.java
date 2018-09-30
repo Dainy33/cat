@@ -1,18 +1,15 @@
-package Controller;
+package controller;
 
-import Model.Cat;
-import Model.Persian;
-import org.springframework.beans.factory.annotation.Autowired;
+import model.Cat;
+import model.Persian;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
-import javax.persistence.ConstructorResult;
 
 @Controller
-@RequestMapping(value = "cat")
+@RequestMapping(value = "/cat")
 public class CatController {
 
     @Resource

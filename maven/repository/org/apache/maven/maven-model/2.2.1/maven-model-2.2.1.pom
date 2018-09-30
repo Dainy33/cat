@@ -27,8 +27,8 @@ under the License.
 
   <artifactId>maven-model</artifactId>
 
-  <name>Maven Model</name>
-  <description>Maven Model</description>
+  <name>Maven model</name>
+  <description>Maven model</description>
 
   <dependencies>
     <dependency>

@@ -1,6 +1,6 @@
 package service;
 
-import Model.Cat;
+import model.Cat;
 
 public interface Feed {
     public String eating(Cat cat);

@@ -27,7 +27,7 @@ under the License.
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>maven-profile</artifactId>
-  <name>Maven Profile Model</name>
+  <name>Maven Profile model</name>
   <build>
     <plugins>
       <plugin>

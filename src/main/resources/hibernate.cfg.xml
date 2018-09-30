@@ -10,7 +10,7 @@
         <property name="hibernate.connection.autocommit">true</property><!--自动提交事务-->
 
         <!--注册映射文件写在cfg.xml-->
-        <mapping resource="Dao/entity.hbm.xml"/>
+        <mapping resource="hibernate/entity.hbm.xml"/>
 
 
     </session-factory>

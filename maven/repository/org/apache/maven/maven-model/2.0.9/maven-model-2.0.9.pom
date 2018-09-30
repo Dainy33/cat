@@ -27,8 +27,8 @@ under the License.
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>maven-model</artifactId>
-  <name>Maven Model</name>
-  <description>Maven Model</description>
+  <name>Maven model</name>
+  <description>Maven model</description>
   <build>
     <plugins>
       <plugin>

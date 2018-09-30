@@ -1,6 +1,6 @@
-package Dao;
+package dao;
 
-import Model.Cat;
+import model.Cat;
 import org.springframework.stereotype.Repository;
 
 @Repository

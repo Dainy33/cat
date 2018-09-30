@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class CatType {
     public static final String  Birman  = "Birman";

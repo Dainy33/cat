@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-public class Staff {
+public class Customer {
 }
 /**
  * @program: cat

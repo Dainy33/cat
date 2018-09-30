@@ -1,6 +1,5 @@
-import Model.Cat;
-import Model.CatType;
-import Model.Persian;
+import model.CatType;
+import model.Persian;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
