@@ -3,7 +3,7 @@ package Model;
 import java.io.Serializable;
 
 public class Cat implements Serializable {
-    private String id;
+    private Integer id;
     private Integer age;
     private String name;
     private String type;
@@ -11,18 +11,18 @@ public class Cat implements Serializable {
     public Cat() {
     }
 
-    public Cat(String id, Integer age, String name, String type) {
+    public Cat(Integer id, Integer age, String name, String type) {
         this.id = id;
         this.age = age;
         this.name = name;
         this.type = type;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

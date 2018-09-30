@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: log4j:log4j:1.2.17-atlassian-2-19d553e">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.17-atlassian-2-19d553e/log4j-1.2.17-atlassian-2-19d553e.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.17-atlassian-2-19d553e/log4j-1.2.17-atlassian-2-19d553e-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/log4j/log4j/1.2.17-atlassian-2-19d553e/log4j-1.2.17-atlassian-2-19d553e-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

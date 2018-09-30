@@ -7,6 +7,8 @@
 
 
 
+    <!--这个id标签目前来看能对应Integer，不能对应String!!!!-->
+    <!--String要自定义generator-->
     <class name="Model.Birman" table="birman">                  <!--指定实体类和对应的数据表-->
         <id name="id" column="id">                          <!--<id>元素设定类中的id和表的主键id的映射-->
             <generator class="native"/>          <!--<gender>元素指定对象标识符生成器，负责生成唯一id。以后会详细讲-->
