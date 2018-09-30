@@ -9,10 +9,8 @@ import javax.annotation.Resource;
 
 @Service
 public class BuyImpl implements Buy {
-    //@Component 开始用的@Autowired才变紫,Resource不变
-    //@Component 后来用@Resource也变紫
     @Resource
-    CatDao catDao;
+    private CatDao catDao;
 
     public void buy(Cat cat) {
         catDao.save(cat);

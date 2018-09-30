@@ -1,14 +1,5 @@
-import model.CatType;
-import model.Persian;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import org.junit.*;
-import service.Meow;
-import service.implement.MeowImpl;
-
 public class JUnitTest {
+/*
     private static final SessionFactory ourSessionFactory;
 
     static {
@@ -39,6 +30,7 @@ public class JUnitTest {
         session.close();
     }
 
+*/
 
 }
 /**
