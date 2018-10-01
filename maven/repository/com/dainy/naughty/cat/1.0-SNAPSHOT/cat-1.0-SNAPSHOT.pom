@@ -7,6 +7,7 @@
     <groupId>com.dainy.naughty</groupId>
     <artifactId>cat</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
 
     <build>
@@ -14,7 +15,8 @@
             maven项目默认不加载main目录下的.xml文件
             在maven项目的根目录的pom.xml文件中添加指定生成xml资源文件的目录
         -->
-        <resources>
+<!--        <resources>
+            BUG!!!!!这句话从导致target.classes里没有加载配置文件
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
@@ -22,7 +24,7 @@
                 </includes>
                 <filtering>true</filtering>
             </resource>
-        </resources>
+        </resources>-->
 
         <!--使test的resources能直接用main的resources-->
         <testResources>
@@ -33,6 +35,7 @@
                 <directory>${project.basedir}/src/main/resources</directory>
             </testResource>
         </testResources>
+
     </build>
 
 
@@ -53,32 +56,77 @@
             <version>1.6.4</version>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>jstl-api</artifactId>
             <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet.jsp</groupId>
+                    <artifactId>jsp-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
+
+
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>3.0-alpha-1</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.3.1.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>4.3.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.3.1.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>5.0.4.RELEASE</version>
+            <version>4.3.1.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.0.4.RELEASE</version>
+            <version>4.3.1.RELEASE</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>4.3.1.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>4.2.5.RELEASE</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.3.6.Final</version>
         </dependency>
-
-
 
         <!--bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
         <dependency>
@@ -94,19 +142,17 @@
         </dependency>
 
         <!--bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"-->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>4.2.5.RELEASE</version>
-
-        </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.6</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.4</version>
+        </dependency>
     </dependencies>
 
 </project>

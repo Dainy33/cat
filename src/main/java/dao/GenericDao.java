@@ -6,24 +6,31 @@ import org.hibernate.SessionFactory;
 import javax.annotation.Resource;
 import java.io.Serializable;
 
+
 public class GenericDao<T extends Serializable, PK> {
 
     //.xml Beans使用@Resource
     @Resource(name = "sessionFactory")
-    private static SessionFactory sessionFactory;
+    private  SessionFactory sessionFactory;
 
-    private static Session session = sessionFactory.getCurrentSession();
+
+/*    error in Constructor
+    private Session session = sessionFactory.getCurrentSession();*/
 
     public void save(T object) {
+        Session session = sessionFactory.getCurrentSession();
         session.save(object);
 
     }
 
     public void update(T object) {
+        Session session = sessionFactory.getCurrentSession();
         session.update(object);
     }
 
     public void remove(T object) {
+        Session session = sessionFactory.getCurrentSession();
+
         session.delete(object);
     }
 

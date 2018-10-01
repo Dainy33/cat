@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model"> <!--根元素-->
+
+
+
+    <!--这个id标签目前来看能对应Integer，不能对应String!!!!-->
+    <!--String要自定义generator-->
+    <class name="model.Birman" table="birman">                  <!--指定实体类和对应的数据表-->
+        <id name="id" column="id">                          <!--<id>元素设定类中的id和表的主键id的映射-->
+            <generator class="native"/>          <!--<gender>元素指定对象标识符生成器，负责生成唯一id。以后会详细讲-->
+        </id>
+        <property name="name" column="name"/>     <!--name是实体类属性的名字，column是数据表中列的名字-->
+        <property name="age" column="age"/>
+        <property name="type" column="type"/>
+    </class>
+
+    <class name="model.Persian" table="persian">                  <!--指定实体类和对应的数据表-->
+        <id name="id" column="id">                          <!--<id>元素设定类中的id和表的主键id的映射-->
+            <generator class="native"/>          <!--<gender>元素指定对象标识符生成器，负责生成唯一id。以后会详细讲-->
+        </id>
+        <property name="name" column="name"/>     <!--name是实体类属性的名字，column是数据表中列的名字-->
+        <property name="age" column="age"/>
+        <property name="type" column="type"/>
+    </class>
+
+
+    <class name="model.Ragdoll" table="ragdoll">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name"/>
+        <property name="age" column="age"/>
+        <property name="type" column="type"/>
+    </class>
+
+
+
+    <!--
+    maven项目默认不加载main目录下的.xml文件
+
+    解决办法有两个：
+
+    其一是将xml映射文件放在maven中的“resources”目录下；
+
+    其二是在maven项目的根目录的pom.xml文件中添加指定生成xml资源文件的目录：
+    -->
+
+
+
+</hibernate-mapping>
