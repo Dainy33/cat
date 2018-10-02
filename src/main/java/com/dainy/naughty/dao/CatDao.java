@@ -1,6 +1,6 @@
-package dao;
+package com.dainy.naughty.dao;
 
-import model.Cat;
+import com.dainy.naughty.model.Cat;
 import org.springframework.stereotype.Repository;
 
 @Repository

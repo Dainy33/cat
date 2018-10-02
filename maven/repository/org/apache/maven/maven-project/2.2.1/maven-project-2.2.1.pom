@@ -28,7 +28,7 @@ under the License.
   <artifactId>maven-project</artifactId>
 
   <name>Maven Project Builder</name>
-  <description>This library is used to not only read Maven project object model files, but to assemble inheritence
+  <description>This library is used to not only read Maven project object com.dainy.naughty.model files, but to assemble inheritence
     and to retrieve remote models as required.</description>
 
   <dependencies>

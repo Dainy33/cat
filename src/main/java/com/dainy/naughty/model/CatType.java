@@ -1,4 +1,4 @@
-package model;
+package com.dainy.naughty.model;
 
 public class CatType {
     public static final String  Birman  = "Birman";

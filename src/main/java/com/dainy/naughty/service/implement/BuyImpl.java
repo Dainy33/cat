@@ -1,10 +1,10 @@
-package service.implement;
+package com.dainy.naughty.service.implement;
 
-import dao.CatDao;
-import model.Cat;
+import com.dainy.naughty.dao.CatDao;
+import com.dainy.naughty.model.Cat;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import service.Buy;
+import com.dainy.naughty.service.Buy;
 
 import javax.annotation.Resource;
 

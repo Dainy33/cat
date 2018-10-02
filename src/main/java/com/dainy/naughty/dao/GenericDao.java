@@ -1,4 +1,4 @@
-package dao;
+package com.dainy.naughty.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

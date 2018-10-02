@@ -161,7 +161,7 @@
         </dependency>
 
         <!--
-                java.lang.IllegalArgumentException: No converter found for return value of type: class utils.SuccessResponseInfo
+                java.lang.IllegalArgumentException: No converter found for return value of type: class com.dainy.naughty.utils.SuccessResponseInfo
                 springmvc默认是没有对象转换成json的转换器的，需要手动添加jackson依赖
         -->
         <dependency>

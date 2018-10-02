@@ -1,4 +1,4 @@
-package model;
+package com.dainy.naughty.model;
 
 public class Ragdoll extends Cat{
     public Ragdoll() {

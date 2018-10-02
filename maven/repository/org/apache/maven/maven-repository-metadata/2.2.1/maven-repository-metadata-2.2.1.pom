@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-repository-metadata</artifactId>
 
-  <name>Maven Repository Metadata model</name>
+  <name>Maven Repository Metadata com.dainy.naughty.model</name>
   <description>Per-directory repository metadata.</description>
 
   <dependencies>

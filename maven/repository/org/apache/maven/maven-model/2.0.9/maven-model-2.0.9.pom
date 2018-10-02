@@ -27,8 +27,8 @@ under the License.
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>maven-model</artifactId>
-  <name>Maven model</name>
-  <description>Maven model</description>
+  <name>Maven com.dainy.naughty.model</name>
+  <description>Maven com.dainy.naughty.model</description>
   <build>
     <plugins>
       <plugin>

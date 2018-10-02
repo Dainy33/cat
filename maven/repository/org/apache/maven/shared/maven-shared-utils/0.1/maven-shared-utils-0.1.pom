@@ -10,7 +10,7 @@
   <artifactId>maven-shared-utils</artifactId>
   <name>Maven Shared Utils</name>
   <version>0.1</version>
-  <description>Shared utils without any further dependencies</description>
+  <description>Shared com.dainy.naughty.utils without any further dependencies</description>
   <prerequisites>
     <maven>${mavenVersion}</maven>
   </prerequisites>

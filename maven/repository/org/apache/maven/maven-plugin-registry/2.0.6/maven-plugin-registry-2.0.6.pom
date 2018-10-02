@@ -26,7 +26,7 @@ under the License.
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.maven</groupId>
   <artifactId>maven-plugin-registry</artifactId>
-  <name>Maven Plugin Registry model</name>
+  <name>Maven Plugin Registry com.dainy.naughty.model</name>
   <version>2.0.6</version>
   <build>
     <plugins>

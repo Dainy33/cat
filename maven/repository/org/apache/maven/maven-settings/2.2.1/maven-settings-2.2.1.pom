@@ -27,7 +27,7 @@ under the License.
 
   <artifactId>maven-settings</artifactId>
 
-  <name>Maven Local Settings model</name>
+  <name>Maven Local Settings com.dainy.naughty.model</name>
 
   <dependencies>
     <dependency>

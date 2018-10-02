@@ -1,15 +1,14 @@
-package controller;
+package com.dainy.naughty.controller;
 
-import model.Cat;
-import model.Persian;
+import com.dainy.naughty.model.Cat;
+import com.dainy.naughty.model.Persian;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import service.Buy;
-import utils.ResponseInfo;
+import com.dainy.naughty.service.Buy;
+import com.dainy.naughty.utils.ResponseInfo;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Controller
@@ -18,11 +17,6 @@ public class CatController {
 
     @Resource
     private Buy iBuy;
-
-    @PostConstruct
-    public void test(){
-        System.out.println("aaaaaaaaaaaaa");
-    }
 
     @RequestMapping(value = "/buyNewCat",method = RequestMethod.GET)
     @ResponseBody

@@ -38,7 +38,7 @@ limitations under the License.
     <connection>scm:git:git@github.com:sonatype/plexus-utils.git</connection>
     <developerConnection>scm:git:git@github.com:sonatype/plexus-utils.git</developerConnection>
     <url>http://github.com/sonatype/plexus-utils</url>
-    <tag>plexus-utils-3.0.8</tag>
+    <tag>plexus-com.dainy.naughty.utils-3.0.8</tag>
   </scm>
   <issueManagement>
     <system>JIRA</system>
@@ -51,7 +51,7 @@ limitations under the License.
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
-          <!-- required to ensure the test classes are used, not surefire's plexus-utils -->
+          <!-- required to ensure the test classes are used, not surefire's plexus-com.dainy.naughty.utils -->
           <childDelegation>true</childDelegation>
           <excludes>
             <exclude>org/codehaus/plexus/util/FileBasedTestCase.java</exclude>

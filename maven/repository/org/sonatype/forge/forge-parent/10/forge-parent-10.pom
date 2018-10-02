@@ -40,7 +40,7 @@ under the License.
 
     <properties>
         <forgeReleaseId>forge-releases</forgeReleaseId>
-        <forgeReleaseUrl>https://repository.sonatype.org/service/local/staging/deploy/maven2</forgeReleaseUrl>
+        <forgeReleaseUrl>https://repository.sonatype.org/com.dainy.naughty.service/local/staging/deploy/maven2</forgeReleaseUrl>
         <forgeSnapshotId>forge-snapshots</forgeSnapshotId>
         <forgeSnapshotUrl>https://repository.sonatype.org/content/repositories/snapshots</forgeSnapshotUrl>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

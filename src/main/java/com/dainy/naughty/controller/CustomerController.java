@@ -1,6 +1,6 @@
-package controller;
+package com.dainy.naughty.controller;
 
-public class StaffController {
+public class CustomerController {
 }
 /**
  * @program: cat

@@ -1,4 +1,4 @@
-package utils;
+package com.dainy.naughty.utils;
 
 public class FailedResponseInfo extends ResponseInfo {
     private String errorMsg;

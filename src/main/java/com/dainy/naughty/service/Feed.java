@@ -1,6 +1,6 @@
-package service;
+package com.dainy.naughty.service;
 
-import model.Cat;
+import com.dainy.naughty.model.Cat;
 
 public interface Feed {
     public String eating(Cat cat);

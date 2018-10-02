@@ -124,7 +124,7 @@ under the License.
     <module>maven-doxia-tools</module>
     <module>maven-filtering</module>
     <module>maven-invoker</module>
-    <module>maven-model-converter</module>
+    <module>maven-com.dainy.naughty.model-converter</module>
     <module>maven-osgi</module>
     <module>maven-reporting-impl</module>
     <module>maven-repository-builder</module>
@@ -138,7 +138,7 @@ under the License.
 -->
     <!--
     Uses jdk 1.5
-    <module>maven-shared-model</module>
+    <module>maven-shared-com.dainy.naughty.model</module>
     -->
 <!--
   </modules>

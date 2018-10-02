@@ -39,7 +39,7 @@
               <minimizeJar>true</minimizeJar>
               <artifactSet>
                 <includes>
-                  <include>org.codehaus.plexus:plexus-utils</include>
+                  <include>org.codehaus.plexus:plexus-com.dainy.naughty.utils</include>
                   <include>commons-lang:commons-lang</include>
                 </includes>
               </artifactSet>

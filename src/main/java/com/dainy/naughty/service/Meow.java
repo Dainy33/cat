@@ -1,6 +1,6 @@
-package service;
+package com.dainy.naughty.service;
 
-import model.Cat;
+import com.dainy.naughty.model.Cat;
 
 public interface Meow {
     public String meow(Cat cat);

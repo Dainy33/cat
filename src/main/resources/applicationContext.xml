@@ -68,22 +68,22 @@
 
     <!-- 配置切面 -->
     <aop:config>
-        <!-- 配置切入点 com.dainy.naughty.*.service.*+.*(..)
-            * org.ssh.service.*+.*(..)
+        <!-- 配置切入点 com.dainy.naughty.*.com.dainy.naughty.service.*+.*(..)
+            * org.ssh.com.dainy.naughty.service.*+.*(..)
                 *：表示方法的作用域，*表示所有
-                org.ssh.service.*：表示org.ssh.service下的任何包
-                org.ssh.service.*+：表示org.ssh.service下的任何包及其子包
+                org.ssh.com.dainy.naughty.service.*：表示org.ssh.service下的任何包
+                org.ssh.com.dainy.naughty.service.*+：表示org.ssh.service下的任何包及其子包
                 *(..)：*表示任何方法，(..)表示方法的任何参数
          -->
-        <aop:pointcut id="pointcut" expression="execution(* service.*+.*(..))"/>
+        <aop:pointcut id="pointcut" expression="execution(* com.dainy.naughty.service.*+.*(..))"/>
         <!-- 适配切入点和事务增强 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
     </aop:config>
 
 
     <!-- 扫描自定义的Dao,Service -->
-    <context:component-scan base-package="dao"/>
-    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="com.dainy.naughty.dao"/>
+    <context:component-scan base-package="com.dainy.naughty.service"/>
 
 
 </beans>

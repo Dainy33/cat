@@ -1,7 +1,7 @@
-package service.implement;
+package com.dainy.naughty.service.implement;
 
-import model.Cat;
-import service.Feed;
+import com.dainy.naughty.model.Cat;
+import com.dainy.naughty.service.Feed;
 
 public class FeedImpl implements Feed {
     public String eating(Cat cat) {

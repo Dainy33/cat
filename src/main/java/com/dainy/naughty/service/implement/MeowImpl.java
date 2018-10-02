@@ -1,9 +1,9 @@
-package service.implement;
+package com.dainy.naughty.service.implement;
 
-import model.Cat;
-import service.Meow;
+import com.dainy.naughty.model.Cat;
+import com.dainy.naughty.service.Meow;
 
-import static model.CatType.*;
+import static com.dainy.naughty.model.CatType.*;
 
 public class MeowImpl implements Meow {
 
