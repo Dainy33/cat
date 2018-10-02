@@ -9,7 +9,7 @@ import service.Buy;
 import javax.annotation.Resource;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class BuyImpl implements Buy {
     @Resource
     private CatDao catDao;

@@ -15,16 +15,16 @@
             maven项目默认不加载main目录下的.xml文件
             在maven项目的根目录的pom.xml文件中添加指定生成xml资源文件的目录
         -->
-<!--        <resources>
-            BUG!!!!!这句话从导致target.classes里没有加载配置文件
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
-        </resources>-->
+        <!--        <resources>
+                    BUG!!!!!这句话从导致target.classes里没有加载配置文件
+                    <resource>
+                        <directory>src/main/java</directory>
+                        <includes>
+                            <include>**/*.xml</include>
+                        </includes>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>-->
 
         <!--使test的resources能直接用main的resources-->
         <testResources>
@@ -160,13 +160,19 @@
             <version>5.1.6</version>
         </dependency>
 
-<!--
-        java.lang.IllegalArgumentException: No converter found for return value of type: class utils.SuccessResponseInfo
-        springmvc默认是没有对象转换成json的转换器的，需要手动添加jackson依赖
--->
+        <!--
+                java.lang.IllegalArgumentException: No converter found for return value of type: class utils.SuccessResponseInfo
+                springmvc默认是没有对象转换成json的转换器的，需要手动添加jackson依赖
+        -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
             <version>2.6.3</version>
         </dependency>
 
@@ -177,7 +183,6 @@
         </dependency>
 
     </dependencies>
-
 
 
 </project>

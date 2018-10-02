@@ -29,10 +29,14 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="hibernateProperties">
             <props>
+                <!--
+                分析：可能是在spring配置文件中，并不识别“hbm2ddl.auto”项， 所以该项配置根本没起到作用，
+                而使用“hibernate.hbm2ddl.auto”，spring的配置文件是可以识别的，问题得到解决。期待有更权威的解释。
+                <prop key="hbm2ddl.auto">create</prop>
+                -->
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hbm2ddl.auto">update</prop>
-                <prop key="current_session_context_class">thread</prop>
             </props>
         </property>
         <!--
@@ -75,11 +79,9 @@
     </aop:config>
 
 
-
     <!-- 扫描自定义的Dao,Service -->
     <context:component-scan base-package="dao"/>
     <context:component-scan base-package="service"/>
-
 
 
 </beans>
