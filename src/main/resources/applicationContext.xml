@@ -54,6 +54,8 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
     <!-- 配置事务增强 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>

@@ -23,18 +23,18 @@ public class GenericDao<T extends Serializable, PK> {
     hibernate3版本可以使用getCurrentSession()来创建session，而hibernate4版本则不行。*/
 
     public void save(T object) {
-        Session session = sessionFactory.openSession();
+        Session session = sessionFactory.getCurrentSession();
         session.save(object);
 
     }
 
     public void update(T object) {
-        Session session = sessionFactory.openSession();
+        Session session = sessionFactory.getCurrentSession();
         session.update(object);
     }
 
     public void remove(T object) {
-        Session session = sessionFactory.openSession();
+        Session session = sessionFactory.getCurrentSession();
 
         session.delete(object);
     }
