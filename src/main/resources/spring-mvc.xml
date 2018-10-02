@@ -22,8 +22,6 @@
     <!--<context:property-placeholder location="classpath:type.properties"/>-->
 
     <!-- 扫描自定义的Controller -->
-    <context:component-scan base-package="dao"/>
-    <context:component-scan base-package="service"/>
     <context:component-scan base-package="controller"/>
 
     <!-- 配置基于注解处理器映射器 -->
@@ -53,6 +51,7 @@
                     </list>
                 </property>
             </bean>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
     <!--<mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>-->

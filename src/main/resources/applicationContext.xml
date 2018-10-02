@@ -2,22 +2,27 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+        Beans注入的顺序要按链式写
+    -->
 
     <!-- 数据库配置 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/CatCafe"/>
         <property name="username" value="root"/>
         <property name="password" value="951357"/>
 
         <!-- Connection Pooling Info -->
-        <property name="maxActive" value="20" />
-        <property name="maxIdle" value="5" />
-        <property name="maxWait" value="5000" />
-        <property name="validationQuery" value="select 1" />
+        <property name="maxActive" value="20"/>
+        <property name="maxIdle" value="5"/>
+        <property name="maxWait" value="5000"/>
+        <property name="validationQuery" value="select 1"/>
     </bean>
     <bean id="sessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -26,30 +31,55 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
+                <prop key="hbm2ddl.auto">update</prop>
+                <prop key="current_session_context_class">thread</prop>
             </props>
         </property>
-<!--
-        直接用映射文件要用mappingLocations,映射文件地址用mappingDirectoryLocations
--->
-<!--
-        <property name="mappingDirectoryLocations" value="classpath:{dictionary}"/>
--->
+        <!--
+                直接用映射文件要用mappingLocations,映射文件地址用mappingDirectoryLocations
+        -->
+        <!--
+                <property name="mappingDirectoryLocations" value="classpath:{dictionary}"/>
+        -->
         <property name="mappingLocations" value="classpath:entity.hbm.xml"/>
     </bean>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-        <property name="prefix" value="/jsp/"/>
-        <property name="suffix" value=".jsp"/>
+    <!-- 配置事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <!-- 注入SessionFactory -->
+        <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <!--使用annotation 自动注册bean,并检查@Required,@Autowired的属性已被注入base-package为需要扫描的包（含所有子包） -->
+    <!-- 配置事务增强 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!-- 配置需要进行事务管理的方法，和事务传播行为 -->
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 配置切面 -->
+    <aop:config>
+        <!-- 配置切入点 com.dainy.naughty.*.service.*+.*(..)
+            * org.ssh.service.*+.*(..)
+                *：表示方法的作用域，*表示所有
+                org.ssh.service.*：表示org.ssh.service下的任何包
+                org.ssh.service.*+：表示org.ssh.service下的任何包及其子包
+                *(..)：*表示任何方法，(..)表示方法的任何参数
+         -->
+        <aop:pointcut id="pointcut" expression="execution(* service.*+.*(..))"/>
+        <!-- 适配切入点和事务增强 -->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
+    </aop:config>
+
+
+
+    <!-- 扫描自定义的Dao,Service -->
     <context:component-scan base-package="dao"/>
     <context:component-scan base-package="service"/>
-    <context:component-scan base-package="controller"/>
-    <mvc:annotation-driven />
-    <!-- 配置default-servlet-handler,避免controller本该跳转的页面又当做请求发出-->
-    <mvc:default-servlet-handler />
+
 
 
 </beans>

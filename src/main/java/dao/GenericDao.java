@@ -2,11 +2,12 @@ package dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 import java.io.Serializable;
 
-
+@Repository
 public class GenericDao<T extends Serializable, PK> {
 
     //.xml Beans使用@Resource

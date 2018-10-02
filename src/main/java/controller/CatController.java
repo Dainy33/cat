@@ -13,6 +13,7 @@ import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 
 @Controller
+@RequestMapping(value = "catController")
 public class CatController {
 
     @Resource
@@ -33,7 +34,7 @@ public class CatController {
         persian.setName("lily");
         iBuy.buy(persian);
 
-        responseInfo = ResponseInfo.createSuccessResponse("");
+        responseInfo = ResponseInfo.createSuccessResponse("Please Get It!");
         return responseInfo;
     }
 }

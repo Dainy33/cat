@@ -12,6 +12,6 @@
 </head>
 <body>
 <a href="jsp/CatJsp.jsp">aaaa</a>
-<a href="/buyNewCat">aaaa</a>
+<a href="/catController/buyNewCat">aaaa</a>
 </body>
 </html>
