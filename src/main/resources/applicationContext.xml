@@ -10,6 +10,10 @@
         Beans注入的顺序要按链式写
     -->
 
+    <!-- 加载type.properties -->
+    <!-- 自动读取配置文件 -->
+    <!--<context:property-placeholder location="classpath:type.properties"/>-->
+
     <!-- 数据库配置 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
@@ -54,6 +58,7 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <!--注解事务,在service方法写@transactional-->
     <tx:annotation-driven transaction-manager="transactionManager" />
 
     <!-- 配置事务增强 -->
@@ -65,6 +70,14 @@
             <tx:method name="delete*" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
+
+    <!-- 自动扫描:扫描自定义的Dao,Service -->
+    <context:component-scan base-package="com.dainy.naughty.dao"/>
+    <context:component-scan base-package="com.dainy.naughty.service"/>
+
+
+    <!-- 配置自动aop -->
+    <aop:aspectj-autoproxy />
 
     <!-- 配置切面 -->
     <aop:config>
@@ -79,11 +92,5 @@
         <!-- 适配切入点和事务增强 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
     </aop:config>
-
-
-    <!-- 扫描自定义的Dao,Service -->
-    <context:component-scan base-package="com.dainy.naughty.dao"/>
-    <context:component-scan base-package="com.dainy.naughty.service"/>
-
 
 </beans>

@@ -10,6 +10,16 @@
     <packaging>war</packaging>
 
 
+    <properties>
+        <springVersion>4.3.1.RELEASE</springVersion>
+        <hibernateVersion>4.3.6.Final</hibernateVersion>
+        <mysqlVersion>5.1.6</mysqlVersion>
+        <dbcpVersion>1.4</dbcpVersion>
+        <jacksonVersion>2.6.3</jacksonVersion>
+        <jstlVersion>1.2</jstlVersion>
+    </properties>
+
+
     <build>
         <!--
             maven项目默认不加载main目录下的.xml文件
@@ -62,7 +72,7 @@
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
-            <version>1.2</version>
+            <version>${jstlVersion}</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>
@@ -79,56 +89,56 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>4.3.1.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>4.2.5.RELEASE</version>
+            <version>${springVersion}</version>
         </dependency>
 
         <!--hibernate依赖-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>4.3.6.Final</version>
+            <version>${hibernateVersion}</version>
         </dependency>
 
         <!--bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
@@ -136,7 +146,7 @@
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
-            <version>1.4</version>
+            <version>${dbcpVersion}</version>
         </dependency>
 
         <dependency>
@@ -157,7 +167,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.6</version>
+            <version>${mysqlVersion}</version>
         </dependency>
 
         <!--
@@ -167,19 +177,19 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.6.3</version>
+            <version>${jacksonVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.6.3</version>
+            <version>${jacksonVersion}</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.6.3</version>
+            <version>${jacksonVersion}</version>
         </dependency>
 
     </dependencies>
