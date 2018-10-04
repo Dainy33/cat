@@ -11,7 +11,7 @@
     <title>CatCafe</title>
 </head>
 <body>
-<a href="jsp/CatJsp.jsp">aaaa</a>
-<a href="/catController/buyNewCat">aaaa</a>
+<a href="jsp/CatJsp.jsp">CatCafe</a>
+<a href="/catController/buyNewCat">BuyNewCat</a>
 </body>
 </html>

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.dainy.naughty.service.Buy;
+import com.dainy.naughty.service.iCatService;
 import com.dainy.naughty.utils.ResponseInfo;
 
 import javax.annotation.Resource;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class CatController {
 
     @Resource
-    private Buy iBuy;
+    private iCatService iBuy;
 
     @RequestMapping(value = "/buyNewCat",method = RequestMethod.GET)
     @ResponseBody

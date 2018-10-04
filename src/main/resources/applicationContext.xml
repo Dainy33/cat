@@ -50,6 +50,7 @@
                 <property name="mappingDirectoryLocations" value="classpath:{dictionary}"/>
         -->
         <property name="mappingLocations" value="classpath:entity.hbm.xml"/>
+        <property name="packagesToScan" value="com.dainy.naughty.model"/>
     </bean>
 
     <!-- 配置事务管理器 -->

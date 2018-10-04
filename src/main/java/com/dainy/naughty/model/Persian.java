@@ -1,5 +1,7 @@
 package com.dainy.naughty.model;
 
+import com.dainy.naughty.utils.CatType;
+
 public class Persian extends Cat{
 
     public Persian() {

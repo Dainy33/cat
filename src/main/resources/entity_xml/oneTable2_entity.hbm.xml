@@ -5,25 +5,19 @@
 
 <hibernate-mapping package="com.dainy.naughty.model"> <!--根元素-->
     <!--https://www.cnblogs.com/DoubleEggs/p/6243238.html-->
-    <class name="Cat" table="cat">
-        <id name="id" column="id">
+    <class name = "Cat" table="cat">
+        <id name="id">
             <generator class="native"/>
         </id>
+        <discriminator column="toName" type="java.lang.String"/>
         <property name="name" column="name"/>
         <property name="age" column="age"/>
         <property name="type" column="type"/>
-        <joined-subclass name="Birman" table="birman">
-            <key column="birman_id"/>
-        </joined-subclass>
-        <joined-subclass name="Persian" table="persian">
-            <key column="persian_id"/>
-        </joined-subclass>
-        <joined-subclass name="Ragdoll" table="ragdoll">
-            <key column="rogdoll_id"/>
-        </joined-subclass>
     </class>
-
-
+    <!--方法2不能用啊-->
+<!--
+    <class name="Birman" discriminator-value="toName" extends=""/>
+-->
 
 
 </hibernate-mapping>

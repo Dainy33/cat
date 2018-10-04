@@ -6,24 +6,22 @@
 <hibernate-mapping package="com.dainy.naughty.model"> <!--根元素-->
     <!--https://www.cnblogs.com/DoubleEggs/p/6243238.html-->
     <class name="Cat" table="cat">
-        <id name="id" column="id">
+        <id name="id">
             <generator class="native"/>
         </id>
+        <discriminator column="toName" type="java.lang.String"/>
         <property name="name" column="name"/>
         <property name="age" column="age"/>
         <property name="type" column="type"/>
-        <joined-subclass name="Birman" table="birman">
-            <key column="birman_id"/>
-        </joined-subclass>
-        <joined-subclass name="Persian" table="persian">
-            <key column="persian_id"/>
-        </joined-subclass>
-        <joined-subclass name="Ragdoll" table="ragdoll">
-            <key column="rogdoll_id"/>
-        </joined-subclass>
+        <subclass name="Birman" discriminator-value="Birman">
+            <property name="price" column="price"/>
+        </subclass>
+        <subclass name="Persian" discriminator-value="Persian">
+
+        </subclass>
+        <subclass name="Ragdoll" discriminator-value="Ragdoll">
+
+        </subclass>
     </class>
-
-
-
 
 </hibernate-mapping>
