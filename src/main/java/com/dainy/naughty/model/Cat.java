@@ -1,8 +1,17 @@
 package com.dainy.naughty.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "cat")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "ClassType" ,discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("cat")
 public class Cat implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Integer id;
     private Integer age;
     private String name;

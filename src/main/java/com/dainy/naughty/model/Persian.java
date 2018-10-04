@@ -2,6 +2,11 @@ package com.dainy.naughty.model;
 
 import com.dainy.naughty.utils.CatType;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Persian")
 public class Persian extends Cat{
 
     public Persian() {

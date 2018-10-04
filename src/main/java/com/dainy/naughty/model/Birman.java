@@ -3,6 +3,11 @@ package com.dainy.naughty.model;
 
 import com.dainy.naughty.utils.CatType;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Birman")
 public class Birman extends Cat {
     private String price;
 

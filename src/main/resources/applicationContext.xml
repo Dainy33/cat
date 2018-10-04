@@ -49,8 +49,13 @@
         <!--
                 <property name="mappingDirectoryLocations" value="classpath:{dictionary}"/>
         -->
-        <property name="mappingLocations" value="classpath:entity.hbm.xml"/>
+        <!--
+                <property name="mappingLocations" value="classpath:entity.hbm.xml"/>
+        -->
+
+        <!--自动扫描实体-关系关系映射Model-->
         <property name="packagesToScan" value="com.dainy.naughty.model"/>
+
     </bean>
 
     <!-- 配置事务管理器 -->
@@ -60,7 +65,7 @@
     </bean>
 
     <!--注解事务,在service方法写@transactional-->
-    <tx:annotation-driven transaction-manager="transactionManager" />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
     <!-- 配置事务增强 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
@@ -78,7 +83,7 @@
 
 
     <!-- 配置自动aop -->
-    <aop:aspectj-autoproxy />
+    <aop:aspectj-autoproxy/>
 
     <!-- 配置切面 -->
     <aop:config>

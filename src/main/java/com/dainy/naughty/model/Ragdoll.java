@@ -2,6 +2,11 @@ package com.dainy.naughty.model;
 
 import com.dainy.naughty.utils.CatType;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("Ragdoll")
 public class Ragdoll extends Cat{
     public Ragdoll() {
         this.setType(CatType.Ragdoll);
