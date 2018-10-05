@@ -33,6 +33,7 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
+
     <!-- 配置spring listener 以便在web容器启动的时候能自动初始化spring -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -60,5 +61,8 @@
         <servlet-name>SpringMVC</servlet-name>
         <url-pattern>/v2/api-docs</url-pattern>
     </servlet-mapping>
+
+
+
 
 </web-app>

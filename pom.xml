@@ -15,6 +15,7 @@
         <hibernateVersion>4.3.6.Final</hibernateVersion>
         <mysqlVersion>5.1.6</mysqlVersion>
         <dbcpVersion>1.4</dbcpVersion>
+        <log4j2Version>2.0.2</log4j2Version>
         <jacksonVersion>2.6.3</jacksonVersion>
         <jstlVersion>1.2</jstlVersion>
     </properties>
@@ -63,12 +64,33 @@
             <version>RELEASE</version>
         </dependency>
 
+        <!--log4j2-->
+        <!--log4j和log4j2冲突-->
+<!--        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2Version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j2Version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+            <version>${log4j2Version}</version>
+        </dependency>-->
+
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
             <version>1.6.4</version>
         </dependency>
 
+        <!--jstl-->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>jstl-api</artifactId>
@@ -174,6 +196,7 @@
                 java.lang.IllegalArgumentException: No converter found for return value of type: class com.dainy.naughty.utils.SuccessResponseInfo
                 springmvc默认是没有对象转换成json的转换器的，需要手动添加jackson依赖
         -->
+        <!--jackson-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
